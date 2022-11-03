@@ -1145,6 +1145,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bluejay/proprietary/vendor/lib/egl/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLES_mali.so \
     vendor/google/bluejay/proprietary/vendor/lib/hw/audio.platform.aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.platform.aoc.so \
     vendor/google/bluejay/proprietary/vendor/lib/hw/audio.primary.gs101.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.gs101.so \
+    vendor/google/bluejay/proprietary/vendor/lib/hw/hwcomposer.gs101.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/hwcomposer.gs101.so \
     vendor/google/bluejay/proprietary/vendor/lib/hw/sound_trigger.primary.gs101.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sound_trigger.primary.gs101.so \
     vendor/google/bluejay/proprietary/vendor/lib/hw/vendor.google.whitechapel.audio.audioext@3.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.google.whitechapel.audio.audioext@3.0-impl.so \
     vendor/google/bluejay/proprietary/vendor/lib/hw/vulkan.mali.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.mali.so \
@@ -1162,8 +1163,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/bluejay/proprietary/vendor/lib/libExynosC2Vp8Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2Vp8Enc.so \
     vendor/google/bluejay/proprietary/vendor/lib/libExynosC2Vp9Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2Vp9Dec.so \
     vendor/google/bluejay/proprietary/vendor/lib/libExynosC2Vp9Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2Vp9Enc.so \
+    vendor/google/bluejay/proprietary/vendor/lib/libExynosHWCService.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosHWCService.so \
     vendor/google/bluejay/proprietary/vendor/lib/libOpenCL-pixel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOpenCL-pixel.so \
     vendor/google/bluejay/proprietary/vendor/lib/lib_aion_buffer.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_aion_buffer.so \
+    vendor/google/bluejay/proprietary/vendor/lib/libacryl_hdr_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacryl_hdr_plugin.so \
     vendor/google/bluejay/proprietary/vendor/lib/libadaptedinfo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadaptedinfo.so \
     vendor/google/bluejay/proprietary/vendor/lib/libamcsextfile.so:$(TARGET_COPY_OUT_VENDOR)/lib/libamcsextfile.so \
     vendor/google/bluejay/proprietary/vendor/lib/libaoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaoc.so \
@@ -1172,8 +1175,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/bluejay/proprietary/vendor/lib/libbo_av1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbo_av1.so \
     vendor/google/bluejay/proprietary/vendor/lib/libc2filterplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc2filterplugin.so \
     vendor/google/bluejay/proprietary/vendor/lib/libdisplaycolor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdisplaycolor.so \
+    vendor/google/bluejay/proprietary/vendor/lib/libdrmresource.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdrmresource.so \
     vendor/google/bluejay/proprietary/vendor/lib/libedgetpu_client.google.so:$(TARGET_COPY_OUT_VENDOR)/lib/libedgetpu_client.google.so \
     vendor/google/bluejay/proprietary/vendor/lib/libedgetpu_util.so:$(TARGET_COPY_OUT_VENDOR)/lib/libedgetpu_util.so \
+    vendor/google/bluejay/proprietary/vendor/lib/libexynosdisplay.so:$(TARGET_COPY_OUT_VENDOR)/lib/libexynosdisplay.so \
     vendor/google/bluejay/proprietary/vendor/lib/libfvsam_prm_parser.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfvsam_prm_parser.so \
     vendor/google/bluejay/proprietary/vendor/lib/libgc2_av1_dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgc2_av1_dec.so \
     vendor/google/bluejay/proprietary/vendor/lib/libgc2_base.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgc2_base.so \
@@ -1234,6 +1239,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bluejay/proprietary/vendor/lib64/google_wifi_firmware_config_version_c_wrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/google_wifi_firmware_config_version_c_wrapper.so \
     vendor/google/bluejay/proprietary/vendor/lib64/hw/audio.platform.aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.platform.aoc.so \
     vendor/google/bluejay/proprietary/vendor/lib64/hw/audio.primary.gs101.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.gs101.so \
+    vendor/google/bluejay/proprietary/vendor/lib64/hw/hwcomposer.gs101.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/hwcomposer.gs101.so \
     vendor/google/bluejay/proprietary/vendor/lib64/hw/sound_trigger.primary.gs101.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.gs101.so \
     vendor/google/bluejay/proprietary/vendor/lib64/hw/vendor.google.whitechapel.audio.audioext@3.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.google.whitechapel.audio.audioext@3.0-impl.so \
     vendor/google/bluejay/proprietary/vendor/lib64/hw/vulkan.mali.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.mali.so \
@@ -1251,9 +1257,11 @@ PRODUCT_COPY_FILES += \
     vendor/google/bluejay/proprietary/vendor/lib64/libExynosC2Vp8Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Vp8Enc.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libExynosC2Vp9Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Vp9Dec.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libExynosC2Vp9Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Vp9Enc.so \
+    vendor/google/bluejay/proprietary/vendor/lib64/libExynosHWCService.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosHWCService.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libOpenCL-pixel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOpenCL-pixel.so \
     vendor/google/bluejay/proprietary/vendor/lib64/lib_aion_buffer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_aion_buffer.so \
     vendor/google/bluejay/proprietary/vendor/lib64/lib_reader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_reader.so \
+    vendor/google/bluejay/proprietary/vendor/lib64/libacryl_hdr_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacryl_hdr_plugin.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libadaptedinfo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadaptedinfo.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libamcsextfile.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libamcsextfile.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libaoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaoc.so \
@@ -1264,9 +1272,11 @@ PRODUCT_COPY_FILES += \
     vendor/google/bluejay/proprietary/vendor/lib64/libdarwinn_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdarwinn_hal.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libdeeptouch.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdeeptouch.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libdisplaycolor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplaycolor.so \
+    vendor/google/bluejay/proprietary/vendor/lib64/libdrmresource.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmresource.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libedgetpu_client.google.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libedgetpu_client.google.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libedgetpu_tflite_compiler.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libedgetpu_tflite_compiler.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libedgetpu_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libedgetpu_util.so \
+    vendor/google/bluejay/proprietary/vendor/lib64/libexynosdisplay.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libexynosdisplay.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libfvsam_prm_parser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfvsam_prm_parser.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libgc2_av1_dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_av1_dec.so \
     vendor/google/bluejay/proprietary/vendor/lib64/libgc2_base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_base.so \
