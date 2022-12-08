@@ -1,5 +1,5 @@
 service vendor.camera-provider-2-7-google /apex/com.google.pixel.camera.hal/bin/hw/android.hardware.camera.provider@2.7-service-google
-    class hal
+    class hal cameraWatchdog
     user system
     group system
     namespace mnt

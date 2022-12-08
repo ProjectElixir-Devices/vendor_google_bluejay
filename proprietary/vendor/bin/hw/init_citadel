@@ -72,14 +72,16 @@ log_ro_version() {
 find_image_file() {
     version="$1"
 
-    # There are several flavors of pre-production chips and they're all signed
-    # differently (and so are production chips). If we have multiple images to
-    # choose from, we'll try to pick the image that matches the running
-    # firmware.
+    # There are several flavors of dauntless chips and they're all signed
+    # differently. If we have multiple images to choose from, we'll try to pick
+    # the image that matches the running firmware.
 
     # The -vv option will try to identify the flavor. If it can, it will append
     # a /FLAVOR string to the version string.
     flavor=$(echo $version | cut -d/ -f3)
+    # For node-locked images we have to let the chip tell us
+    [[ -z "$flavor" ]] &&
+      flavor=$(${UPDATER} -l | grep Chip | sed -e 's/^.*(//' -e 's/).*//')
     # Look for a matching image name
     [[ -n "$flavor" ]] && log_info "Flavor: $flavor" &&
       [[ -f "$FWDIR/$flavor.ec.bin" ]] &&

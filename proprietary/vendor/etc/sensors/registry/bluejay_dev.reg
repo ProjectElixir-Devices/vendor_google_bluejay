@@ -145,6 +145,8 @@ hp_gain1=2
 
 # Display info.
 +/dev/display_info/0
+# Maximum panel refresh rate.
+panel_max_rr=60
 # Link to ALS attached to this display.
 attached_alsp=/dev/tmd3719/0
 
@@ -237,5 +239,8 @@ aoc2ap_gpio_id=gpio90
 lux_remap=-1.0 -1.0 -1.0
 
 # float[3]={MinDelta, MaxDelta, LuxRatio}
-lux_debounce_up=1 200 0.1
-lux_debounce_down=1 200 0.1
+lux_debounce_up=1 5000 0.15
+lux_debounce_down=0.3 5000 0.1
+
+# ALS[2], RLS[2], Fusion[2], each containing <maxSampleAgeMsec> and <maxNumOfSamples>
+filter_configs=500 60 500 30 500 90
