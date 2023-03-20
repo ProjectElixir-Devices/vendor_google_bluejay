@@ -68,23 +68,23 @@
         <brightnessThrottlingMap>
             <brightnessThrottlingPoint>
                 <thermalStatus>light</thermalStatus>
-                <!-- Throttling to 500 nits: (500-2.0)/(500-2.0)*(0.62-0.0)+0.0 = 0.62 -->
-                <brightness>0.62</brightness>
+                <!-- Throttling to 465 nits: (465-2.0)/(500-2.0)*(0.62-0.0)+0.0 = 0.576425703 -->
+                <brightness>0.576425703</brightness>
             </brightnessThrottlingPoint>
             <brightnessThrottlingPoint>
                 <thermalStatus>moderate</thermalStatus>
-                <!-- Throttling to 346 nits: (346-2.0)/(500-2.0)*(0.62-0.0)+0.0 = 0.428273092 -->
-                <brightness>0.428273092</brightness>
+                <!-- Throttling to 297 nits: (297-2.0)/(500-2.0)*(0.62-0.0)+0.0 = 0.367269076 -->
+                <brightness>0.367269076</brightness>
             </brightnessThrottlingPoint>
             <brightnessThrottlingPoint>
                 <thermalStatus>severe</thermalStatus>
-                <!-- Throttling to 274 nits: (274-2.0)/(500-2.0)*(0.62-0.0)+0.0 = 0.338634538 -->
-                <brightness>0.338634538</brightness>
+                <!-- Throttling to 213 nits: (213-2.0)/(500-2.0)*(0.62-0.0)+0.0 = 0.262690763 -->
+                <brightness>0.262690763</brightness>
             </brightnessThrottlingPoint>
             <brightnessThrottlingPoint>
                 <thermalStatus>critical</thermalStatus>
-                <!-- Throttling to 200 nits: (200-2.0)/(500-2.0)*(0.62-0.0)+0.0 = 0.246506024 -->
-                <brightness>0.246506024</brightness>
+                <!-- Throttling to 150 nits: (150-2.0)/(500-2.0)*(0.62-0.0)+0.0 = 0.184257028 -->
+                <brightness>0.184257028</brightness>
             </brightnessThrottlingPoint>
         </brightnessThrottlingMap>
     </thermalThrottling>
@@ -93,5 +93,16 @@
     <screenBrightnessRampFastIncrease>0.7047244</screenBrightnessRampFastIncrease>
     <screenBrightnessRampSlowDecrease>0.05</screenBrightnessRampSlowDecrease>
     <screenBrightnessRampSlowIncrease>0.05</screenBrightnessRampSlowIncrease>
+
+    <screenOffBrightnessSensor>
+        <type>com.google.sensor.binned_brightness</type>
+    </screenOffBrightnessSensor>
+    <screenOffBrightnessSensorValueToLux>
+        <item>-1</item> <!-- 0: OFF -->
+        <item>0</item>  <!-- 1: NIGHT -->
+        <item>5</item>  <!-- 2: LOW -->
+        <item>80</item> <!-- 3: HIGH -->
+        <item>1500</item> <!-- 4: SUN -->
+    </screenOffBrightnessSensorValueToLux>
 </displayConfiguration>
 

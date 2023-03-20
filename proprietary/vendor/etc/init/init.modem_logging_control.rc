@@ -49,8 +49,18 @@ service modem_logging_update_header /vendor/bin/modem_logging_control UPDATE_HEA
     disabled
     oneshot
 
+service modem_logging_enabled_change /vendor/bin/modem_logging_control ENABLED_CHANGE
+    class main
+    user system
+    group system
+    disabled
+    oneshot
+
 on property:persist.vendor.sys.modem.logging.enable=*
     setprop vendor.sys.modem.logging.enable ${persist.vendor.sys.modem.logging.enable}
+
+on property:vendor.sys.modem.logging.skip=false && property:vendor.sys.modem.logging.enable=*
+    start modem_logging_enabled_change
 
 # Only start logging with below conditions
 # 1. Modem logging is enabled
