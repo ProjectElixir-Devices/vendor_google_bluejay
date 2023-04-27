@@ -1435,6 +1435,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libOpenCL \
+    libGLES_mali \
     com.google.pixel.camera.hal \
     com.google.android.camera.experimental2021 \
     android.hardware.camera.provider@2.7-service-google-apex \
