@@ -1,0 +1,2 @@
+proprietary/vendor/apex/com.google.pixel.camera.hal.apex filter=lfs diff=lfs merge=lfs -text
+proprietary/product/priv-app/DevicePersonalizationPrebuiltPixel2021/DevicePersonalizationPrebuiltPixel2021.apk filter=lfs diff=lfs merge=lfs -text
